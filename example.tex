@@ -1,5 +1,7 @@
-\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+% !TEX program = xelatex
 
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+\usepackage[T1]{fontenc}
 % Use babel or polyglossia to automatically redefine macros for terms
 % Armor Class, Level, etc...
 % Default output is in English; captions are located in lib/dndstrings.sty.
@@ -7,9 +9,29 @@
 %1. To load a language with babel:
 %	\usepackage[<lang>]{babel}
 %2. To load a language with polyglossia:
-%	\usepackage{polyglossia}
-%	\setdefaultlanguage{<lang>}
-\usepackage[english]{babel}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+
+% \setmainlanguage[numerals=devanagari]{marathi}
+\setmainlanguage{marathi}
+% \setmainfont{Shobhika}
+\setmainfont[Script=Devanagari, Mapping=devanagarinumerals]{Shobhika}
+% \setmainfont{Lohit Marathi}
+\setotherlanguages{english}
+% Define the Latin font
+% \setmainfont{Noto Serif}
+
+% Define the Devanagari font (Noto Sans Devanagari)
+% \newfontfamily\devanagarifont{Noto Sans Devanagari}[
+%   Script=Devanagari,
+%   Renderer=HarfBuzz % Use HarfBuzz for complex scripts like Devanagari
+% ]
+
+% \newfontfamily\marathifont{Noto Sans Devanagari}[Script=Devanagari]
+% \newfontfamily\marathifont{NotoSansDevanagari-Regular}[Script=Devanagari]
+% \newfontfamily\englishfont{Times New Roman}
+% \defaultfontfeatures{Mapping=tex-text}
+% \usepackage[english]{babel}
 %\usepackage[italian]{babel}
 % For further options (multilanguage documents, hypenations, language environments...)
 % please refer to babel/polyglossia's documentation.
@@ -31,10 +53,11 @@
   breaklines=true,
 }
 
-\title{The Dark \LaTeX{} \\
-\large An Example of the dndbook Class}
-\author{The rpgTeX Team}
-\date{2020/04/21}
+% \title{ 
+%   \devanagarifont ।। मराठी आरती संग्रह ।। \\
+% }
+% \date{}
+\title{ मराठी आरती संग्रह } \author{ शौनक नाशिककर } \date{\today}
 
 \begin{document}
 
@@ -46,316 +69,350 @@
 
 \mainmatter%
 
-\part{Layout}
+\part{आरती}
 
-\chapter{Sections}
+\chapter{सुखकर्ता दुःखहर्ता}
 
-\DndDropCapLine{T}{his package is designed to aid you in} writing beautifully typeset documents for the fifth edition of the world's greatest roleplaying game. It starts by adjusting the section formatting from the defaults in \LaTeX{} to something a bit more familiar to the reader. The chapter formatting is displayed above.
+% \begin{verbatim}
+% \paragraph*{start}
+सुखकर्ता दुखहर्ता, वार्ता विघ्नांची। \\
+नुरवी; पुरवी प्रेम, कृपा जयाची।\\
+सर्वांगी सुंदर, उटी शेंदुराची। \\
+कंठी झळके माळ, मुक्ताफळांची. ॥१॥ \\
+% -------------------------------------- \\
+\rule{\linewidth}{1pt} \\
+जय देव, जय देव जय मंगलमूर्ती। \\
+दर्शनमात्रे मन कामना पुरती ॥धृ॥ \\
+\rule{\linewidth}{1pt} \\
+% -------------------------------------- \\
+रत्नखचित फरा तूज गौरीकुमरा । \\
+चंदनाची उटी कुंकुमकेशरा । \\
+हिरे जडित मुकुट शोभतो बरा । \\
+रुणझुणती नुपुरे चरणी घागरिया । \\
+चरणीच्या घागरिया रुणझुण वाजती । \\
+तेथे नांदे देवा अंबर गर्जती । \\
+ताता ठुमकत ठुमकत नाचे गणपती । \\
+तव शंकर पार्वती कौतुक पाहाती ॥२॥ \\
+\rule{\linewidth}{1pt} \\
+लंबोदर पीतांबर, फणिवरबंधना। \\
+सरळ सोंड, वक्रतुंड त्रिनयना। \\
+दास रामाचा, वाट पाहे सदना। \\
+संकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना। \\
+जय देव जय देव, जय मंगलमूर्ती। \\
+दर्शनमात्रे मनकामना पुरती ॥३॥ \\
+\rule{\linewidth}{1pt}
+% -------------------------------------- \\
+% \end{start}
 
-\section{Section}
-Sections break up chapters into large groups of associated text.
 
-\subsection{Subsection}
-Subsections further break down the information for the reader.
+% \end{verbatim}
 
-\subsubsection{Subsubsection}
-Subsubsections are the furthest division of text that still have a block header. Below this level, headers are displayed inline.
+% \DndDropCapLine{T}{his package is designed to aid you in} writing beautifully typeset documents for the fifth edition of the world's greatest roleplaying game. It starts by adjusting the section formatting from the defaults in \LaTeX{} to something a bit more familiar to the reader. The chapter formatting is displayed above.
 
-\paragraph{Paragraph}
-The paragraph format is seldom used in the core books, but is available if you prefer it to the ``normal'' style.
+% \section{Section}
+% Sections break up chapters into large groups of associated text.
 
-\subparagraph{Subparagraph}
-The subparagraph format with the paragraph indent is likely going to be more familiar to the reader.
+% \subsection{Subsection}
+% Subsections further break down the information for the reader.
 
-\section{Special Sections}
-The module also includes functions to aid in the proper typesetting of multi-line section headers: |\DndFeatHeader| for feats, |\DndItemHeader| magic items and traps, and |\DndSpellHeader| for spells.
+% \subsubsection{Subsubsection}
+% Subsubsections are the furthest division of text that still have a block header. Below this level, headers are displayed inline.
 
-\DndFeatHeader{Typesetting Savant}[Prerequisite: \LaTeX{} distribution]
-You have acquired a package which aids in typesetting source material for one of your favorite games, giving you the following benefits:
+% \paragraph{Paragraph}
+% The paragraph format is seldom used in the core books, but is available if you prefer it to the ``normal'' style.
 
-\begin{itemize}
-  \item You have advantage on Intelligence checks to typeset new content.
-  \item When you fail an Intelligence check to typeset new content, you can ask questions online at the package's website.
-\end{itemize}
+% \subparagraph{Subparagraph}
+% The subparagraph format with the paragraph indent is likely going to be more familiar to the reader.
 
-\DndItemHeader{Foo's Quill}{Wondrous item, rare}
-This quill has 3 charges. While holding it, you can use an action to expend 1 of its charges. The quill leaps from your hand and writes a contract applicable to your situation.
+% \section{Special Sections}
+% The module also includes functions to aid in the proper typesetting of multi-line section headers: ।\DndFeatHeader। for feats, ।\DndItemHeader। magic items and traps, and ।\DndSpellHeader। for spells.
 
-The quill regains 1d3 expended charges daily at dawn.
+% \DndFeatHeader{Typesetting Savant}[Prerequisite: \LaTeX{} distribution]
+% You have acquired a package which aids in typesetting source material for one of your favorite games, giving you the following benefits:
 
-\DndSpellHeader%
-  {Beautiful Typesetting}
-  {4th-level illusion}
-  {1 action}
-  {5 feet}
-  {S, M (ink and parchment, which the spell consumes)}
-  {Until dispelled}
-You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
+% \begin{itemize}
+%   \item You have advantage on Intelligence checks to typeset new content.
+%   \item When you fail an Intelligence check to typeset new content, you can ask questions online at the package's website.
+% \end{itemize}
 
-While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
+% \DndItemHeader{Foo's Quill}{Wondrous item, rare}
+% This quill has 3 charges. While holding it, you can use an action to expend 1 of its charges. The quill leaps from your hand and writes a contract applicable to your situation.
 
-\section{Map Regions}
-The map region functions |\DndArea| and |\DndSubArea| provide automatic numbering of areas.
+% The quill regains 1d3 expended charges daily at dawn.
 
-\DndArea{Village of Hommlet}
-This is the village of hommlet.
+% \DndSpellHeader%
+%   {Beautiful Typesetting}
+%   {4th-level illusion}
+%   {1 action}
+%   {5 feet}
+%   {S, M (ink and parchment, which the spell consumes)}
+%   {Until dispelled}
+% You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
 
-\DndSubArea{Inn of the Welcome Wench}
-Inside the village is the inn of the Welcome Wench.
+% While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
 
-\DndSubArea{Blacksmith's Forge}
-There's a blacksmith in town, too.
+% \section{Map Regions}
+% The map region functions ।\DndArea। and ।\DndSubArea। provide automatic numbering of areas.
 
-\DndArea{Foo's Castle}
-This is foo's home, a hovel of mud and sticks.
+% \DndArea{Village of Hommlet}
+% This is the village of hommlet.
 
-\DndSubArea{Moat}
-This ditch has a board spanning it.
+% \DndSubArea{Inn of the Welcome Wench}
+% Inside the village is the inn of the Welcome Wench.
 
-\DndSubArea{Entrance}
-A five-foot hole reveals the dirt floor illuminated by a hole in the roof.
+% \DndSubArea{Blacksmith's Forge}
+% There's a blacksmith in town, too.
 
-\chapter{Text Boxes}
+% \DndArea{Foo's Castle}
+% This is foo's home, a hovel of mud and sticks.
 
-The module has three environments for setting text apart so that it is drawn to the reader's attention. |DndReadAloud| is used for text that a game master would read aloud.
+% \DndSubArea{Moat}
+% This ditch has a board spanning it.
 
-\begin{DndReadAloud}
-  As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
-\end{DndReadAloud}
+% \DndSubArea{Entrance}
+% A five-foot hole reveals the dirt floor illuminated by a hole in the roof.
 
-\section{As an Aside}
-The other two environments are the |DndComment| and the |DndSidebar|. The |DndComment| is breakable and can safely be used inline in the text.
+% \chapter{Text Boxes}
 
-\begin{DndComment}{This Is a Comment Box!}
-  A |DndComment| is a box for minimal highlighting of text. It lacks the ornamentation of |DndSidebar|, but it can handle being broken over a column.
-\end{DndComment}
+% The module has three environments for setting text apart so that it is drawn to the reader's attention. ।DndReadAloud। is used for text that a game master would read aloud.
 
-The |DndSidebar| is not breakable and is best used floated toward a page corner as it is below.
+% \begin{DndReadAloud}
+%   As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
+% \end{DndReadAloud}
 
-\begin{DndSidebar}[float=!b]{Behold the DndSidebar!}
-  The |DndSidebar| is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
-\end{DndSidebar}
+% \section{As an Aside}
+% The other two environments are the ।DndComment। and the ।DndSidebar।. The ।DndComment। is breakable and can safely be used inline in the text.
 
-\section{Tables}
-The |DndTable| colors the even rows and is set to the width of a line by default.
+% \begin{DndComment}{This Is a Comment Box!}
+%   A ।DndComment। is a box for minimal highlighting of text. It lacks the ornamentation of ।DndSidebar।, but it can handle being broken over a column.
+% \end{DndComment}
 
-\begin{DndTable}[header=Nice Table]{XX}
-    Table head  & Table head \\
-    Some value  & Some value \\
-    Some value  & Some value \\
-    Some value  & Some value
-\end{DndTable}
+% The ।DndSidebar। is not breakable and is best used floated toward a page corner as it is below.
 
-\chapter{Monsters and NPCs}
+% \begin{DndSidebar}[float=!b]{Behold the DndSidebar!}
+%   The ।DndSidebar। is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+% \end{DndSidebar}
 
-% Monster stat block
-\begin{DndMonster}[float*=b,width=\textwidth + 8pt]{Monster Foo}
-  \begin{multicols}{2}
-    \DndMonsterType{Medium aberration (metasyntactic variable), neutral evil}
+% \section{Tables}
+% The ।DndTable। colors the even rows and is set to the width of a line by default.
 
-    % If you want to use commas in the key values, enclose the values in braces.
-    \DndMonsterBasics[
-        armor-class = {9 (12 with \emph{mage armor})},
-        hit-points  = {\DndDice{3d8 + 3}},
-        speed       = {30 ft., fly 30 ft.},
-      ]
+% \begin{DndTable}[header=Nice Table]{XX}
+%     Table head  & Table head \\
+%     Some value  & Some value \\
+%     Some value  & Some value \\
+%     Some value  & Some value
+% \end{DndTable}
 
-    \DndMonsterAbilityScores[
-        str = 12,
-        dex = 8,
-        con = 13,
-        int = 10,
-        wis = 14,
-        cha = 15,
-      ]
+% \chapter{Monsters and NPCs}
 
-    \DndMonsterDetails[
-        %saving-throws = {Str +0, Dex +0, Con +0, Int +0, Wis +0, Cha +0},
-        %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
-        %damage-vulnerabilities = {cold},
-        %damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
-        %damage-immunities = {poison},
-        %condition-immunities = {poisoned},
-        senses = {darkvision 60 ft., passive Perception 10},
-        languages = {Common, Goblin, Undercommon},
-        challenge = 1,
-      ]
-    % Traits
-    \DndMonsterAction{Innate Spellcasting}
-    Foo's spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
-    \begin{DndMonsterSpells}
-      \DndInnateSpellLevel{misty step}
-      \DndInnateSpellLevel[3]{fog cloud, rope trick}
-      \DndInnateSpellLevel[1]{identify}
-    \end{DndMonsterSpells}
+% % Monster stat block
+% \begin{DndMonster}[float*=b,width=\textwidth + 8pt]{Monster Foo}
+%   \begin{multicols}{2}
+%     \DndMonsterType{Medium aberration (metasyntactic variable), neutral evil}
 
-    \DndMonsterAction{Spellcasting}
-    Foo is a 2nd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following sorcerer spells prepared:
-    \begin{DndMonsterSpells}
-      \DndMonsterSpellLevel{blade ward, fire bolt, light, shocking grasp}
-      \DndMonsterSpellLevel[1][3]{burning hands, mage armor, shield}
-    \end{DndMonsterSpells}
+%     % If you want to use commas in the key values, enclose the values in braces.
+%     \DndMonsterBasics[
+%         armor-class = {9 (12 with \emph{mage armor})},
+%         hit-points  = {\DndDice{3d8 + 3}},
+%         speed       = {30 ft., fly 30 ft.},
+%       ]
 
-    \DndMonsterSection{Actions}
-    \DndMonsterAction{Multiattack}
-    The foo makes two melee attacks.
+%     \DndMonsterAbilityScores[
+%         str = 12,
+%         dex = 8,
+%         con = 13,
+%         int = 10,
+%         wis = 14,
+%         cha = 15,
+%       ]
 
-    %Default values are shown commented out
-    \DndMonsterAttack[
-      name=Dagger,
-      %distance=both, % valid options are in the set {both,melee,ranged},
-      %type=weapon, %valid options are in the set {weapon,spell}
-      mod=+3,
-      %reach=5,
-      %range=20/60,
-      %targets=one target,
-      dmg=\DndDice{1d4+1},
-      dmg-type=piercing,
-      %plus-dmg=,
-      %plus-dmg-type=,
-      %or-dmg=,
-      %or-dmg-when=,
-      %extra=,
-    ]
+%     \DndMonsterDetails[
+%         %saving-throws = {Str +0, Dex +0, Con +0, Int +0, Wis +0, Cha +0},
+%         %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
+%         %damage-vulnerabilities = {cold},
+%         %damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
+%         %damage-immunities = {poison},
+%         %condition-immunities = {poisoned},
+%         senses = {darkvision 60 ft., passive Perception 10},
+%         languages = {Common, Goblin, Undercommon},
+%         challenge = 1,
+%       ]
+%     % Traits
+%     \DndMonsterAction{Innate Spellcasting}
+%     Foo's spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+%     \begin{DndMonsterSpells}
+%       \DndInnateSpellLevel{misty step}
+%       \DndInnateSpellLevel[3]{fog cloud, rope trick}
+%       \DndInnateSpellLevel[1]{identify}
+%     \end{DndMonsterSpells}
 
-    %\DndMonsterMelee calls \DndMonsterAttack with the melee option
-    \DndMonsterMelee[
-      name=Flame Tongue Longsword,
-      mod=+3,
-      %reach=5,
-      %targets=one target,
-      dmg=\DndDice{1d8+1},
-      dmg-type=slashing,
-      plus-dmg=\DndDice{2d6},
-      plus-dmg-type=fire,
-      or-dmg=\DndDice{1d10+1},
-      or-dmg-when=if used with two hands,
-      %extra=,
-    ]
+%     \DndMonsterAction{Spellcasting}
+%     Foo is a 2nd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following sorcerer spells prepared:
+%     \begin{DndMonsterSpells}
+%       \DndMonsterSpellLevel{blade ward, fire bolt, light, shocking grasp}
+%       \DndMonsterSpellLevel[1][3]{burning hands, mage armor, shield}
+%     \end{DndMonsterSpells}
 
-    %\DndMonsterRanged calls \DndMonsterAttack with the ranged option
-    \DndMonsterRanged[
-      name=Assassin's Light Crossbow,
-      mod=+1,
-      range=80/320,
-      dmg=\DndDice{1d8},
-      dmg-type=piercing,
-      %plus-dmg=,
-      %plus-dmg-type=,
-      %or-dmg=,
-      %or-dmg-when=,
-      extra={, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one}
-    ]
+%     \DndMonsterSection{Actions}
+%     \DndMonsterAction{Multiattack}
+%     The foo makes two melee attacks.
 
-    % Legendary Actions
-    \DndMonsterSection{Legendary Actions}
-    The foo can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The foo regains spent legendary actions at the start of its turn.
+%     %Default values are shown commented out
+%     \DndMonsterAttack[
+%       name=Dagger,
+%       %distance=both, % valid options are in the set {both,melee,ranged},
+%       %type=weapon, %valid options are in the set {weapon,spell}
+%       mod=+3,
+%       %reach=5,
+%       %range=20/60,
+%       %targets=one target,
+%       dmg=\DndDice{1d4+1},
+%       dmg-type=piercing,
+%       %plus-dmg=,
+%       %plus-dmg-type=,
+%       %or-dmg=,
+%       %or-dmg-when=,
+%       %extra=,
+%     ]
 
-    \begin{DndMonsterLegendaryActions}
-      \DndMonsterLegendaryAction{Move}{The foo moves up to its speed.}
-      \DndMonsterLegendaryAction{Dagger Attack}{The foo makes a dagger attack.}
-      \DndMonsterLegendaryAction{Create Contract (Costs 3 Actions)}{The foo presents a contract in a language it knows and waves it in the face of a creature within 10 feet. The creature must make a DC 10 Intelligence saving throw. On a failure, the creature is incapacitated until the start of the foo's next turn. A creature who cannot read the language in which the contract is written has advantage on this saving throw.}
-    \end{DndMonsterLegendaryActions}
-  \end{multicols}
-\end{DndMonster}
+%     %\DndMonsterMelee calls \DndMonsterAttack with the melee option
+%     \DndMonsterMelee[
+%       name=Flame Tongue Longsword,
+%       mod=+3,
+%       %reach=5,
+%       %targets=one target,
+%       dmg=\DndDice{1d8+1},
+%       dmg-type=slashing,
+%       plus-dmg=\DndDice{2d6},
+%       plus-dmg-type=fire,
+%       or-dmg=\DndDice{1d10+1},
+%       or-dmg-when=if used with two hands,
+%       %extra=,
+%     ]
 
-The |DndMonster| environment is used to typeset monster and NPC stat blocks. The module supplies many functions to easily typeset the contents of the stat block
+%     %\DndMonsterRanged calls \DndMonsterAttack with the ranged option
+%     \DndMonsterRanged[
+%       name=Assassin's Light Crossbow,
+%       mod=+1,
+%       range=80/320,
+%       dmg=\DndDice{1d8},
+%       dmg-type=piercing,
+%       %plus-dmg=,
+%       %plus-dmg-type=,
+%       %or-dmg=,
+%       %or-dmg-when=,
+%       extra={, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one}
+%     ]
 
-\part{Customization}
+%     % Legendary Actions
+%     \DndMonsterSection{Legendary Actions}
+%     The foo can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The foo regains spent legendary actions at the start of its turn.
 
-\chapter{Colors}
+%     \begin{DndMonsterLegendaryActions}
+%       \DndMonsterLegendaryAction{Move}{The foo moves up to its speed.}
+%       \DndMonsterLegendaryAction{Dagger Attack}{The foo makes a dagger attack.}
+%       \DndMonsterLegendaryAction{Create Contract (Costs 3 Actions)}{The foo presents a contract in a language it knows and waves it in the face of a creature within 10 feet. The creature must make a DC 10 Intelligence saving throw. On a failure, the creature is incapacitated until the start of the foo's next turn. A creature who cannot read the language in which the contract is written has advantage on this saving throw.}
+%     \end{DndMonsterLegendaryActions}
+%   \end{multicols}
+% \end{DndMonster}
 
-\begin{table*}[b]
-  \caption{\DndFontTableTitle{}Colors Supported by this Package}\label{tab:colors}
+% The ।DndMonster। environment is used to typeset monster and NPC stat blocks. The module supplies many functions to easily typeset the contents of the stat block
 
-  \begin{tabularx}{\linewidth}{lX}
-    \textbf{Color}                  & \textbf{Description} \\
-    \rowcolor{PhbLightGreen}
-    |PhbLightGreen|                 & Light green used in PHB Part 1 (Default) \\
-    \rowcolor{PhbLightCyan}
-    |PhbLightCyan|                  & Light cyan used in PHB Part 2 \\
-    \rowcolor{PhbMauve}
-    |PhbMauve|                      & Pale purple used in PHB Part 3 \\
-    \rowcolor{PhbTan}
-    |PhbTan|                        & Light brown used in PHB appendix \\
-    \rowcolor{DmgLavender}
-    |DmgLavender|                   & Pale purple used in DMG Part 1 \\
-    \rowcolor{DmgCoral}
-    |DmgCoral|                      & Orange-pink used in DMG Part 2 \\
-    \rowcolor{DmgSlateGray}
-    |DmgSlateGray| (|DmgSlateGrey|) & Blue-gray used in PHB Part 3 \\
-    \rowcolor{DmgLilac}
-    |DmgLilac|                      & Purple-gray used in DMG appendix \\
-    \rowcolor{BrGreen}
-    |BrGreen|                       & Gray-green used for tables in Basic Rules\\
-  \end{tabularx}
-\end{table*}
+% \part{Customization}
 
-This package provides several global color variables to style |DndComment|, |DndReadAloud|, |DndSidebar|, and |DndTable| environments.
+% \chapter{Colors}
 
-\begin{DndTable}[header=Box Colors]{lX}
-  Color            &  Description \\
-  |commentcolor|   & |DndComment| background \\
-  |readaloudcolor| & |DndReadAloud| background \\
-  |sidebarcolor|   & |DndSidebar| background \\
-  |tablecolor|     & background of even |DndTable| rows \\
-\end{DndTable}
+% \begin{table*}[b]
+%   \caption{\DndFontTableTitle{}Colors Supported by this Package}\label{tab:colors}
 
-They also accept an optional color argument to set the color for a single instance. See Table~\ref{tab:colors} for a list of core book accent colors.
+%   \begin{tabularx}{\linewidth}{lX}
+%     \textbf{Color}                  & \textbf{Description} \\
+%     \rowcolor{PhbLightGreen}
+%     ।PhbLightGreen।                 & Light green used in PHB Part 1 (Default) \\
+%     \rowcolor{PhbLightCyan}
+%     ।PhbLightCyan।                  & Light cyan used in PHB Part 2 \\
+%     \rowcolor{PhbMauve}
+%     ।PhbMauve।                      & Pale purple used in PHB Part 3 \\
+%     \rowcolor{PhbTan}
+%     ।PhbTan।                        & Light brown used in PHB appendix \\
+%     \rowcolor{DmgLavender}
+%     ।DmgLavender।                   & Pale purple used in DMG Part 1 \\
+%     \rowcolor{DmgCoral}
+%     ।DmgCoral।                      & Orange-pink used in DMG Part 2 \\
+%     \rowcolor{DmgSlateGray}
+%     ।DmgSlateGray। (।DmgSlateGrey।) & Blue-gray used in PHB Part 3 \\
+%     \rowcolor{DmgLilac}
+%     ।DmgLilac।                      & Purple-gray used in DMG appendix \\
+%     \rowcolor{BrGreen}
+%     ।BrGreen।                       & Gray-green used for tables in Basic Rules\\
+%   \end{tabularx}
+% \end{table*}
 
-\begin{lstlisting}
-\begin{DndTable}[color=PhbLightCyan]{cX}
-  d8 & Item \\
-  1  & Small wooden button \\
-  2  & Red feather \\
-  3  & Human tooth \\
-  4  & Vial of green liquid \\
-  5  & Loaded dice \\
-  6  & Tasty biscuit \\
-  7  & Broken axe handle \\
-  8  & Tarnished silver locket \\
-\end{DndTable}
-\end{lstlisting}
+% This package provides several global color variables to style ।DndComment।, ।DndReadAloud।, ।DndSidebar।, and ।DndTable। environments.
 
-\begin{DndTable}[color=PhbLightCyan]{cX}
-  d8 & Item \\
-  1  & Small wooden button \\
-  2  & Red feather \\
-  3  & Human tooth \\
-  4  & Vial of green liquid \\
-  5  & Loaded dice \\
-  6  & Tasty biscuit \\
-  7  & Broken axe handle \\
-  8  & Tarnished silver locket \\
-\end{DndTable}
+% \begin{DndTable}[header=Box Colors]{lX}
+%   Color            &  Description \\
+%   ।commentcolor।   & ।DndComment। background \\
+%   ।readaloudcolor। & ।DndReadAloud। background \\
+%   ।sidebarcolor।   & ।DndSidebar। background \\
+%   ।tablecolor।     & background of even ।DndTable। rows \\
+% \end{DndTable}
 
-\section{Themed Colors}
-Use |\DndSetThemeColor[<color>]| to set |commentcolor|, |readaloudcolor|, |sidebarcolor|, and |tablecolor| to a specific color. Calling |\DndSetThemeColor| without an argument sets those colors to the current |themecolor|. In the following example the group limits the change to just a few boxes; after the group finishes, the colors are reverted to what they were before the group started.
+% They also accept an optional color argument to set the color for a single instance. See Table~\ref{tab:colors} for a list of core book accent colors.
 
-\begin{lstlisting}
-\begingroup
-\DndSetThemeColor[PhbMauve]
+% \begin{lstlisting}
+% \begin{DndTable}[color=PhbLightCyan]{cX}
+%   d8 & Item \\
+%   1  & Small wooden button \\
+%   2  & Red feather \\
+%   3  & Human tooth \\
+%   4  & Vial of green liquid \\
+%   5  & Loaded dice \\
+%   6  & Tasty biscuit \\
+%   7  & Broken axe handle \\
+%   8  & Tarnished silver locket \\
+% \end{DndTable}
+% \end{lstlisting}
 
-\begin{DndComment}{This Comment Is in Mauve}
-  This comment is in the the new color.
-\end{DndComment}
+% \begin{DndTable}[color=PhbLightCyan]{cX}
+%   d8 & Item \\
+%   1  & Small wooden button \\
+%   2  & Red feather \\
+%   3  & Human tooth \\
+%   4  & Vial of green liquid \\
+%   5  & Loaded dice \\
+%   6  & Tasty biscuit \\
+%   7  & Broken axe handle \\
+%   8  & Tarnished silver locket \\
+% \end{DndTable}
 
-\begin{DndSidebar}{This Sidebar Is Also Mauve}
-  The sidebar is also using the new theme color.
-\end{DndSidebar}
-\endgroup
-\end{lstlisting}
+% \section{Themed Colors}
+% Use ।\DndSetThemeColor[<color>]। to set ।commentcolor।, ।readaloudcolor।, ।sidebarcolor।, and ।tablecolor। to a specific color. Calling ।\DndSetThemeColor। without an argument sets those colors to the current ।themecolor।. In the following example the group limits the change to just a few boxes; after the group finishes, the colors are reverted to what they were before the group started.
 
-\begingroup
-\DndSetThemeColor[PhbMauve]
+% \begin{lstlisting}
+% \begingroup
+% \DndSetThemeColor[PhbMauve]
 
-\begin{DndComment}{This Comment Is in Mauve}
-  This comment is in the the new color.
-\end{DndComment}
+% \begin{DndComment}{This Comment Is in Mauve}
+%   This comment is in the the new color.
+% \end{DndComment}
 
-\begin{DndSidebar}{This Sidebar Is Also Mauve}
-  The sidebar is also using the new theme color.
-\end{DndSidebar}
-\endgroup
+% \begin{DndSidebar}{This Sidebar Is Also Mauve}
+%   The sidebar is also using the new theme color.
+% \end{DndSidebar}
+% \endgroup
+% \end{lstlisting}
+
+% \begingroup
+% \DndSetThemeColor[PhbMauve]
+
+% \begin{DndComment}{This Comment Is in Mauve}
+%   This comment is in the the new color.
+% \end{DndComment}
+
+% \begin{DndSidebar}{This Sidebar Is Also Mauve}
+%   The sidebar is also using the new theme color.
+% \end{DndSidebar}
+% \endgroup
 
 \end{document}
