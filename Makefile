@@ -1,8 +1,11 @@
-.PHONY: all clean lint
+.PHONY: all clean lint setup
 
-LATEX ?= pdflatex
+LATEX ?= xelatex
 
 all: example.pdf
+
+setup:
+	./bin/setup-latex-env.sh
 
 clean:
 	latexmk -C
