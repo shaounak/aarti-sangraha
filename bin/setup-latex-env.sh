@@ -18,7 +18,10 @@ if command -v apt-get >/dev/null 2>&1; then
     texlive-latex-recommended \
     texlive-latex-extra \
     texlive-fonts-recommended \
+    fonts-noto-core \
     fonts-lohit-deva
+
+  echo "Note: For Marathi/Devanagari text, prefer Noto Serif Devanagari or another full-coverage Devanagari font to avoid square boxes from missing glyphs."
 else
   echo "This setup script currently supports Debian/Ubuntu-based systems only."
   exit 1

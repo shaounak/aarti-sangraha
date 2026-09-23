@@ -160,7 +160,16 @@ If you don't have LaTeX installed, we recommend installing a complete [TeX Live 
 ### Ubuntu
 
 ```sh
-sudo apt-get install texlive-full
+sudo apt-get install texlive-full fonts-noto-core
+```
+
+For Marathi/Devanagari text, use XeLaTeX with a font that has complete Devanagari glyph coverage, such as `Noto Serif Devanagari`. The older `Lohit Devanagari` package can produce square boxes for some vowels and marks when rare characters are missing.
+
+```tex
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\setmainlanguage{marathi}
+\setmainfont[Script=Devanagari, Mapping=devanagarinumerals]{Noto Serif Devanagari}
 ```
 
 ### Arch
